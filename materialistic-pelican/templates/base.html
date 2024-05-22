@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  {% if PRIMARY_COLOR is defined and ACCENT_COLOR is defined %}
+  {% set pc = PRIMARY_COLOR | lower | replace(' ','_') %}
+  {% set ac = ACCENT_COLOR | lower | replace(' ','_') %}
+  {% else %}
+  {% set pc = "indigo" | lower %}
+  {% set ac = "pink" | lower %}
+  {% endif %}
+  {% set matName = "material." + pc + "-" + ac + ".min.css" %}
+
+  {% if USE_CDN %}
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/{{matName}}" >
+  {% else %}
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/material.min.css" >
+  {% endif %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/charte-1.css" />
+
+  {% if FEED_ALL_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+  {% endif %}
+  {% if FEED_ALL_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+  {% endif %}
+  {% if FEED_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+  {% endif %}
+  {% if FEED_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_ATOM and category %}
+  <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_RSS and category %}
+  <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+  {% endif %}
+  {% if TAG_FEED_ATOM and tag %}
+  <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+  {% endif %}
+  {% if TAG_FEED_RSS and tag %}
+  <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+  {% endif %}
+  {% endblock head %}
+</head>
+
+<body id="index" class="home" style="background-color:#000000;">
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="site-title"> <a class="topLinks mdl-navigation__link" href="{{ SITEURL }}/category/accueil.html"> {{ SITENAME }} </a> </span>
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+          <div class="mdl-layout-spacer"></div>
+          <nav class="mdl-navigation mdl-cell--hide-phone">
+            <a class="topLinks mdl-navigation__link" href="{{ SITEURL }}/category/a-propos.html">A propos</a>
+            <a class="topLinks mdl-navigation__link" href="{{ SITEURL }}/category/les-equipes.html">Les Equipes</a>
+            <a class="topLinks mdl-navigation__link" href="{{ SITEURL }}/category/le-challenge-shell-eco-marathon.html">Le challenge Eco-Shell </a>
+            <a class="topLinks mdl-navigation__link" href="{{ SITEURL }}/category/galerie.html">Galerie</a>
+            <a class="topLinks mdl-navigation__link" href="{{ SITEURL }}/category/palmares.html">Palmarès</a>
+            <a class="topLinks mdl-navigation__link" href="{{ SITEURL }}/category/nos-partenaires.html">Nos Partenaires</a>
+            <a class="topLinks mdl-navigation__link" href="{{ SITEURL }}/category/nos-vehicules.html">Nos Véhicules</a>
+            <a class="topLinks mdl-navigation__link" href="{{ SITEURL }}/category/dossier-de-presse.html">Presse</a>
+          </nav>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-left">
+          <p>Nous contacter: 01 60 56 60 60<br>
+             2 rue Edouard Branly, 77000 Melun Cedex</p>
+        </div>
+        <div class="footer-right">
+          <a href="https://www.vinci-melun.org">Notre Lycée</a>
+          <a href="https://www.facebook.com/AugustineShellEco/?locale=fr_FR"><img src="../images/facebook-box.png"></a>
+          <a href="https://www.instagram.com/team_augustine/"><img src="../images/insta-logo.png" width="45" height="45"></a>
+        </div>
+      </footer>
+    </header>
+    <main class="mblog mdl-layout__content">
+      {% block content %}
+      {% endblock %}
+    </main>
+  </div>
+
+  {% if USE_CDN %}
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+  {% else %}
+  <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/material.min.js"></script>
+  {% endif %}
+</body>
+
+<script>
+  Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+    var link = el.querySelector('a');
+    if (!link) {
+      return;
+    }
+    var target = link.getAttribute('href');
+    if (!target) {
+      return;
+    }
+    el.addEventListener('click', function() {
+      location.href = target;
+    });
+  });
+</script>
+
+</html>

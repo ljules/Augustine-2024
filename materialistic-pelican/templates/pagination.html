@@ -1,0 +1,9 @@
+{% if DEFAULT_PAGINATION %}
+<div class="mblog__posts mdl-grid">
+<nav class="m-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <div class="section-spacer"></div>
+    {% if articles_page.has_next() %}
+    {% endif %}
+</nav>
+</div>
+{% endif %}

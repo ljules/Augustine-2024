@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!--
+<div class="mblog mdl-layout mdl-js-layout">
+<main class="mdl-layout__content">
+<div class="mblog__posts mdl-grid">
+-->
+
+<div class="mblog__posts mdl-grid">
+
+  {% block content_title %}
+  {% endblock %}
+
+{% if category != Null %}
+{% for article in articles_page.object_list %}
+  <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
+      <h3 class="entry-title">{{ article.title }}</h3>
+    </div>
+    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      {{ article.content }}
+    </div>
+  </div>
+{% endfor %}
+{% else %}
+<div class="cat_title mdl-cell mdl-cell--12-col mdl-color--primary">
+  <div> <h2 class="mdl-color-text--white"> Accueil </h2> </div>
+  </div>  
+    <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+      <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
+        <h3 class="entry-title">Accueil</h3>
+      </div>
+      <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+        <h1>Bienvenue !</h1>
+  <p>Bienvenue sur notre site. Vous trouverez ici toutes les informations à propos de notre aventure, véhicules, participations et plus encore.</p>
+  <p>Nous sommes une équipe de professeurs et d'étudiants qui prennons part chaque année au pretigieux challenge mondial <strong>Shell Eco-Marathon</strong></p>
+  <p><img src="/images/34046196344_6565d4c3d1_o.jpg" width="600" alt="Action sur le circuit de Londres"></p>
+  <p><img src="/images/CPN-3776GBD2B-1642.jpg" width="600" alt="La team en action.">
+  <img src="/images/34849262346_6913770b79_o.jpg" width="600" alt="Augustine face à la piscine olympique de Londres"></p>
+      </div>
+    </div>
+{% endif %}
+  {% if articles_page.has_other_pages() %}
+  {% include 'pagination.html' %}
+  {% endif %}
+  <!-- </section> /#content -->
+  <!--
+</div>
+</main>
+-->
+</div>
+{% endblock content %}
