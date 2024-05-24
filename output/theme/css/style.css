@@ -1803,6 +1803,76 @@ img {
     display: block
 }
 
+/*************************************/
+/*****   Photo Gallery area css  *****/
+/*************************************/
+
+.photo-gallery{
+	padding: 100px 0 50px;
+	position: relative;
+}
+
+.photo-gallery:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -16px;
+	height: 16px;
+	background: url(../images/wave-bg3.png) repeat-x;
+	z-index: 1;
+}
+
+.photo-single{
+	padding: 8px;
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.photo-single img{
+	border: 8px solid #fff;
+}
+
+.photo-single:before{
+	content: '';
+	display: block;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.photo-single:after{
+	content: '';
+	display: block;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.photo-orange:before,
+.photo-orange:after{
+	background: #ff5722;
+}
+
+.photo-blue:before,
+.photo-blue:after{
+	background: #1976d2;
+}
+
+.photo-green:before,
+.photo-green:after{
+	background: #a4cf27;
+}
+
+
+
 @media only screen and (max-width: 960px) {
     #wrapper {
         transform: translate3d(0, 0, 0)
