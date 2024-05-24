@@ -5,9 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="UTF-8">
+    <!-- Déclaration de la compatibilité pour les différents navigateurs -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Déclaration de la largeur de la vue pour les différents dispositifs -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-  <title>Augustine</title>
+  
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -19,6 +23,10 @@
   <!-- Feed -->
 
   <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
+  <!-- Lien vers le fichier CSS pour la mise en forme -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lien vers le fichier JavaScript pour les fonctionnalités interactives -->
+  <script src="auto_slide.js" async></script>
 
   <!-- Code highlight color scheme -->
       <link href="./theme/css/code_blocks/github.css" rel="stylesheet">
@@ -41,39 +49,67 @@
     <meta property="og:title" content="Augustine" />
     <meta property="og:description" content="View the blog." />
     <meta property="og:url" content="." />
-      <meta name="og:image" content="./images/file.jpg">
+      <meta name="og:image" content="./theme/images/post-bg.jpg">
 </head>
 <!-- TODO : Body class -->
 <body class="home-template">
-
-<nav id="menu">
-  <a class="close-button">Close</a>
-  <div class="nav-wrapper">
-    <p class="nav-label">Menu</p>
-    <ul>
-      <li><a href="../accueil/accueil.html">Accueil</a></li>
-      <li><a href="../a-propos/a-propos.html">A Propos</a></li>
-      <li><a href="../les-equipes/equipe-2022.html">Les equipes</a></li>
-      <li><a href="../le-challenge-shell-eco-marathon/le-challenge-shell-eco-marathon.html">Le challenge Eco-Shell</a></li>
-      <li><a href="../galerie/annee-2023.html">Galerie</a></li>
-      <li><a href="../palmares/palmares.html">Palmarès</a></li>
-      <li><a href="../nos-partenaires/nos-partenaires.html">Nos Partenaires</a></li>
-      <li><a href="../nos-vehicules/nos-vehicules.html">Nos véhicules</a></li>
-      <li><a href="../dossier-de-presse/dossier-de-presse.html">Dossier Presse</a></li>
-    </ul>
-  </div>
+  <div class="container">
+    <!-- Élément carrousel -->
+    <div class="carousel">
+        <!-- Conteneur interne pour les diapositives -->
+        <div class="carousel-inner">
+            <!-- Première diapositive -->
+            <div class="slide">
+                <!-- Image de la première diapositive -->
+                <img src="./images/file.jpg"
+                    alt="Image 1">
+            </div>
+            <!-- Deuxième diapositive -->
+            <div class="slide">
+                <!-- Image de la deuxième diapositive -->
+                <img src="images/20180705_213056.jpg"
+                    alt="Image 2">
+            </div>
+            <!-- Troisième diapositive -->
+            <div class="slide">
+                <!-- Image de la troisième diapositive -->
+                <img src="https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Image 3">
+            </div>
+            <!-- Quatrième diapositive -->
+            <div class="slide">
+                <!-- Image de la quatrième diapositive -->
+                <img src="https://images.pexels.com/photos/2739013/pexels-photo-2739013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Image 4">
+            </div>
+            <!-- Cinquième diapositive -->
+            <div class="slide">
+                <!-- Image de la cinquième diapositive -->
+                <img src="https://images.pexels.com/photos/3555161/pexels-photo-3555161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Image 5">
+            </div>
+        </div>
+        <!-- Conteneur pour les boutons de navigation -->
+        <div class="carousel-controls">
+            <!-- Bouton pour passer à la diapositive précédente -->
+            <button id="prev">Précédent</button>
+            <!-- Bouton pour passer à la diapositive suivante -->
+            <button id="next">Suivant</button>
+        </div>
+        <!-- Conteneur pour les points de navigation -->
+        <div class="carousel-dots"></div>
+    </div>
+</div>
 </nav>
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header id="blog-header" class="has-cover">
       <div class="inner">
         <nav id="navigation">
           <span id="menu-button" class="nav-button">
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="blog-name"><a href=".">Augustine</a></h1>
-            <div class="blog-cover cover" style="background-image: url('./images/file.jpg')">
+           
         
       </div>
     </header>
