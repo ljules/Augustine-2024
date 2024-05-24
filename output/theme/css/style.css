@@ -1803,10 +1803,6 @@ img {
     display: block
 }
 
-/*************************************/
-/*****   Photo Gallery area css  *****/
-/*************************************/
-
 .photo-gallery{
 	padding: 100px 0 50px;
 	position: relative;
@@ -1858,21 +1854,23 @@ img {
 
 .photo-orange:before,
 .photo-orange:after{
-	background: #ff5722;
+	background: #000000;
 }
 
 .photo-blue:before,
 .photo-blue:after{
-	background: #1976d2;
+	background: #0b1a29;
 }
 
 .photo-green:before,
 .photo-green:after{
-	background: #a4cf27;
+	background: #000000;
 }
 
-
-
+. {
+    width: 300px;
+    height: 200px;
+}
 @media only screen and (max-width: 960px) {
     #wrapper {
         transform: translate3d(0, 0, 0)
