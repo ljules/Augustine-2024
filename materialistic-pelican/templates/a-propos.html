@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!--
+<div class="mblog mdl-layout mdl-js-layout">
+<main class="mdl-layout__content">
+<div class="mblog__posts mdl-grid">
+-->
+
+<div class="mblog__posts mdl-grid">
+
+{% block content_title %}
+{% endblock %}
+
+<div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
+        <h3 class="entry-title"><a href="./ma-premiere-page.html" rel="bookmark" title="Permalink to Ma première page">A propos</a></h3>
+    </div>
+    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      <p>Une 1ère page</p>
+    </div>
+
+    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+        <div class="minilogo" style="background-image: url()"></div>
+        <div>
+            <abbr class="published" title="2023-05-30T18:00:00+02:00"> mar. 30 mai 2023 </abbr>
+            <!--
+            <address class="vcard author">By
+                professeur CPI
+            </address>
+            -->
+        </div>
+    </div>
+</div>
+
+{% if articles_page.has_other_pages() %}
+    {% include 'pagination.html' %}
+{% endif %}
+<!-- </section> /#content -->
+<!--
+</div>
+</main>
+-->
+</div>
+{% endblock content %}
