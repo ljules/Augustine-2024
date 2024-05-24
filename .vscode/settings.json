@@ -1,0 +1,13 @@
+{
+    "git.enabled": true,
+    "git.enableStatusBarSync": true,
+    "git.decorations.enabled": true,
+    "git.detectSubmodules": true,
+    "git.confirmSync": true,
+    "git.confirmEmptyCommits": true,
+    "git.ignoreLegacyWarning": true,
+    "git.ignoreMissingGitWarning": true,
+    "git.ignoreWindowsGit27Warning": true,
+    "git.rebaseWhenSync": true,
+    "git.rememberPostCommitCommand": true
+}
