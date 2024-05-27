@@ -1854,17 +1854,17 @@ img {
 
 .photo-orange:before,
 .photo-orange:after{
-	background: #000000;
+	background: #dc1111;
 }
 
 .photo-blue:before,
 .photo-blue:after{
-	background: #0b1a29;
+	background: #2a7cce;
 }
 
 .photo-green:before,
 .photo-green:after{
-	background: #000000;
+	background: #fd7979;
 }
 
 
