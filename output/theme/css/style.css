@@ -798,7 +798,7 @@ img {
 
 #blog-header {
     position: relative;
-    padding: 6em 0;
+    /*padding: 6em 0;*/
     text-align: center
 }
 
@@ -814,7 +814,7 @@ img {
 }
 
 #blog-header.has-cover {
-    padding: 9em 0 10em;
+    /* padding: 9em 0 10em; */
     background: #000;
     overflow: hidden;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
@@ -2047,25 +2047,20 @@ body {
 /* Définition des boutons de contrôle du carousel */
 .carousel-controls {
     position: absolute;
-    /* Les boutons sont absolument positionnés */
     z-index: 5;
-    /* Ils sont placés au-dessus des autres éléments */
-    left: 10%;
-    /* La distance à gauche est de 10% */
-    right: 10%;
-    /* La distance à droite est de 10% */
+    left: 1%;
+    right: 1%;
     top: 50%;
-    /* La distance du haut est de 50% */
     display: flex;
-    /* Affiche les boutons en ligne */
+    align-items: center;
+    justify-items: center;
     justify-content: space-between;
-    /* Espacement égal entre les boutons */
 }
 /* Style des boutons de contrôle */
 .carousel-controls button {
     padding: 10px;
     /* Ajout de padding pour un meilleur contrôle */
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     /* Arrière-plan en aquamarine */
 }
 /* Définition des points de contrôle */
@@ -2076,7 +2071,7 @@ body {
     /* Ils sont placés au-dessus des autres éléments */
     left: 50%;
     /* La distance à gauche est de 50% */
-    right: 50%;
+    right: 100%;
     /* La distance à droite est de 50% */
     bottom: 10%;
     /*La distance du bas est de 10% */
