@@ -4,6 +4,8 @@ Tags: Test, démonstration
 Category: Galerie
 Authors: professeur CPI
 Illustration: fond.jpg
-Voici la 1ère ligne de ma page.
+Voici la 1ère ligne de ma page.kjbkjbj
+
+
 
 <!-- Dossier qui contiendra toutes les photos prises durant les différentes sessions. -->
