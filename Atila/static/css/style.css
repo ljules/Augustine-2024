@@ -940,7 +940,7 @@ img {
 }
 
 .inner {
-    max-width: 32em;
+    max-width: 30em;
     margin: 0 auto;
     padding: 0 2em
 }
@@ -1803,71 +1803,20 @@ img {
     display: block
 }
 
-.photo-gallery{
-	padding: 100px 0 50px;
-	position: relative;
+.images-1{
+
+    width:500px;
+    height: 300px;
+    margin: 10px;
+    border: 10px solid #fefae0;
+    transition-duration: 1s;
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
 }
-
-.photo-gallery:after{
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -16px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	z-index: 1;
-}
-
-.photo-single{
-	padding: 8px;
-	position: relative;
-	margin-bottom: 50px;
-}
-
-.photo-single img{
-	border: 8px solid #fff;
-}
-
-.photo-single:before{
-	content: '';
-	display: block;
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
-
-.photo-single:after{
-	content: '';
-	display: block;
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-}
-
-.photo-orange:before,
-.photo-orange:after{
-	background: #000000;
-}
-
-.photo-blue:before,
-.photo-blue:after{
-	background: #0b1a29;
-}
-
-.photo-green:before,
-.photo-green:after{
-	background: #000000;
-}
-
-
 @media only screen and (max-width: 960px) {
     #wrapper {
         transform: translate3d(0, 0, 0)
@@ -2077,14 +2026,31 @@ body {
     /* Border de 10px pour les points inactifs */
     border: 10px solid #2596be;
 }
+ 
 
 
 
+/* Styles pour la taille des images */
 
+.images-annee2023{
+    
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+    cursor: pointer;
+    border: 10px solid #fefae0;
+    transition-duration: 1s;
 
+}
 
-
-
+.images-annee2023:hover{
+    border: 5px solid #fff;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-filter: none;
+    filter: none;
+}
 
 
 
